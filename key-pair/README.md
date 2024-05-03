@@ -27,6 +27,13 @@
     ```.json
     openssl dgst -sha1 -sign private.pem -out halo.sign halo.txt
     ```
+
+    private.pem => private key untuk memberi signature ada di folder open-ssl/private.pem
+
+    halo.sign => keluaran dari proses signature (formatnya binary)
+
+    halo.txt => file yang ingin di signature
+
 6. Verifikasi signature dengan public key
 
     ```.json
@@ -35,6 +42,8 @@
 
 7. Membuat self-signed certificate dengan OpenSSL
 
+    disebut self-sign karena sign menggunakan private key sendiri
+
     ```.json
     openssl req -key private.pem -new -x509 -days 365 -out public.crt
     ```
@@ -42,7 +51,7 @@
 8. Melihat isi digital certificate
 
     ```.json
-    openssl x509 -in public.crt -text -nooout
+    openssl x509 -in public.crt -text -noout
     ```
 
 

@@ -10,7 +10,7 @@
 
 3. Enkripsi file dengan AES
 
-        gpg --symmetric --cipher-algo AES256 --output halo.enc.txt halo.txt
+        gpg --symmetric --cipher-algo AES256 (--armour kalo mau jadi text) --output (--armour kalo mau jadi text) halo.enc.txt halo.txt
 
 4. Dekripsi file dengan AES
 
